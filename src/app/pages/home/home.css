@@ -1,0 +1,106 @@
+/* ===== 全頁共用字型設定 ===== */
+:host {
+  display: block;
+  font-family: 'Iansui', serif;
+  font-weight: bold;
+  color: #6b4a2b; /* 咖啡色 */
+}
+
+/* ===== 上方標題區 ===== */
+.board-header {
+  background-image: url('/images/board.png');
+  background-size: 100% 100%;
+  padding: 40px;
+  text-align: center;
+}
+h1 {
+  margin: 0;
+  padding: 24px 16px;
+  text-align: center;
+  font-size: 2.2rem;
+  /* background-image: url('/images/board.png'); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /* 等比例完整顯示 */
+}
+
+/* ===== 主要內容區 ===== */
+.magic-container {
+  min-height: calc(100vh - 120px);
+
+  background-color: #b6d7a8;
+  background-image: url('/images/hamster_bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: contain; */
+  background-size: cover;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: left; 
+  align-items: center;
+}
+
+
+/* 半透明層，讓字好看 */
+.overlay {
+  width: 40%;            /* 左側佔畫面 40% */
+  max-width: 360px;      /* 不要太寬 */
+  margin-left: 5%;       /* 跟邊緣留一點距離 */
+  text-align: center;
+  padding: 24px;
+}
+
+
+/* 副標題 */
+.subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 24px;
+}
+
+/* 按鈕區塊 */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* ===== 魔法按鈕 ===== */
+.magic-btn {
+  font-family: 'Iansui', serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 14px 8px;
+  background-color: #d6b28c; /* 淺咖啡色 */
+  color: #4a2f1a;
+  border: none;
+  border-radius: 14px; /* 圓角 */
+  cursor: pointer;
+  line-height: 1.4;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.magic-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.magic-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.magic-container2 {
+  min-height: calc(100vh - 120px);
+
+  background-color: #b6d7a8;
+  background-image: url('/images/hamster_bg.png');
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  /* min-height: 120vh; */
+
+  display: flex;
+  justify-content: center; /* 內容靠左 */
+  align-items: center;
+}

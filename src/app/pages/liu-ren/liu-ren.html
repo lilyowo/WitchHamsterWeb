@@ -1,0 +1,50 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Iansui&display=swap" rel="stylesheet">
+
+@if (showModal) {
+<div class="modal-overlay">
+  <div class="modal-content">
+    <textarea
+    [(ngModel)]="question"
+    placeholder="你想問些什麼？"
+    maxlength="200"
+    rows="5"></textarea>
+
+
+    <p class="instruction">請依照直覺從 1-10000 中選擇三個數字</p>
+
+    <div class="number-inputs">
+      <input type="number" [(ngModel)]="num1" min="1" max="10000">
+      <input type="number" [(ngModel)]="num2" min="1" max="10000">
+      <input type="number" [(ngModel)]="num3" min="1" max="10000">
+    </div>
+
+    <button class="start-btn" (click)="calculate()">開始算掛</button>
+  </div>
+</div>
+}
+
+<div class="container">
+  <div class="board-header">
+    <h1>倉鼠的魔法屋-小六壬</h1>
+  </div>
+
+  <div class="result-content">
+    <div class="content-container">
+      <h2>倉鼠法師掐指一算....</h2>
+      
+      <div class="result-box">
+        <p>您問的事件得出的結果是：</p>
+        <p class="final-abc">【{{resultA}}】、【{{resultB}}】、【{{resultC}}】</p>
+      </div>
+
+      <div class="interpretation">
+        <h3>這個結果的解析是...</h3>
+        <p>{{analysisText}}</p>
+      </div>
+
+      <button class="back-home" routerLink="/home">回首頁</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,164 @@
+/* ===== 全頁共用字型設定 ===== */
+:host {
+  display: block;
+  font-family: 'Iansui', serif;
+}
+/* 彈窗遮罩 */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 彈窗主體 */
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+/* 文字輸入框 */
+textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  resize: none;
+  box-sizing: border-box;
+}
+
+textarea::placeholder {
+  color: #bbb;
+}
+
+.instruction {
+  margin: 20px 0 10px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* 數字輸入框排版 */
+.number-inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.number-inputs input {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* 開始按鈕 */
+.start-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #7b4397; /* 預設一個魔法感的紫色 */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.start-btn:hover {
+  background-color: #dc2430;
+}
+
+/* 結果頁面樣式 */
+.board-header {
+  background-image: url('/images/board.png');
+  background-size: 100% 100%;
+  padding: 40px;
+  text-align: center;
+  font-weight: bold;
+  color: #6b4a2b;
+}
+h1 {
+  margin: 0;
+  padding: 24px 16px;
+  text-align: center;
+  font-size: 2.2rem;
+  /* background-image: url('/images/board.png'); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /* 等比例完整顯示 */
+}
+
+/* .result-content {
+  
+  margin: 20px auto;
+  text-align: center;
+  padding: 0 20px;
+  background-color: #b6d7a8;
+  background-image: url('/images/hamster_bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 150vh;
+  opacity:0.3
+}
+ */
+
+.result-content {
+  position: relative;
+  margin: 20px auto;
+  text-align: center;
+  padding: 0 20px;
+  min-height: 150vh;
+  overflow: hidden; /* 保險用 */
+
+}
+.result-content::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background-image: url('/images/hamster_bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  opacity: 0.3; /* 👈 只影響背景 */
+  z-index: 0;
+}
+.result-content > * {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;         
+  border-radius: 16px;     
+}
+
+
+
+.final-abc {
+  font-size: 24px;
+  font-weight: bold;
+  color: #7b4397;
+  margin: 15px 0;
+}
+
+.interpretation {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #7b4397;
+  text-align: left;
+  margin-top: 30px;
+}
