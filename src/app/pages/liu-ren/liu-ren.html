@@ -43,8 +43,15 @@
         <h3>這個結果的解析是...</h3>
         <p>{{analysisText}}</p>
       </div>
+      <div class="interpretation">
+        <h3>倉鼠法師幫你寫詳細解析</h3>
+        <p>{{analysisText2}}</p>
+        <button class="use-ai" (click)="getAIInterpretation()" [disabled]="isLoading">
+          {{ isLoading ? '讀取中...' : '查看' }}
+        </button>
+      </div>
 
-      <button class="back-home" routerLink="/home">回首頁</button>
+      <button class="use-ai" routerLink="/home">回首頁</button>
     </div>
   </div>
 </div>

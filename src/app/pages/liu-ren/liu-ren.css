@@ -162,3 +162,43 @@ h1 {
   text-align: left;
   margin-top: 30px;
 }
+
+/* 按鈕樣式 */
+.use-ai {
+  display: block;
+  margin: 16px auto 0;
+  background-color: #6F4E37; /* 經典咖啡色 (Coffee) */
+  color: #ffffff;            /* 白色文字 */
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 25px;       /* 圓角：讓它看起來圓潤可愛 */
+  cursor: pointer;
+  transition: all 0.3s ease; /* 讓動畫變滑順 */
+  box-shadow: 0 4px 15px rgba(111, 78, 55, 0.3); /* 淡淡的咖啡色陰影 */
+  outline: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+}
+
+/* 滑鼠游標移上去的視覺效果 */
+.use-ai:hover:not(:disabled) {
+  background-color: #8B5A2B; /* 淺一點的咖啡色 */
+  transform: translateY(-2px); /* 輕微浮起感 */
+  box-shadow: 0 6px 20px rgba(111, 78, 55, 0.4);
+}
+
+/* 按下時的縮放感 */
+.use-ai:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* 讀取中/禁用狀態的樣式 */
+.use-ai:disabled {
+  background-color: #A9A9A9; /* 灰色 */
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+}
