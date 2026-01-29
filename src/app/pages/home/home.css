@@ -56,6 +56,8 @@ h1 {
 .subtitle {
   font-size: 1.4rem;
   margin-bottom: 24px;
+  background-color:#d6b28c;
+  border-radius: 14px;
 }
 
 /* 按鈕區塊 */
