@@ -8,7 +8,7 @@
 
 /* ===== 上方標題區 ===== */
 .board-header {
-  background-image: url('/images/board.png');
+  background-image: url('/images/board2.png');
   background-size: 100% 100%;
   padding: 40px;
   text-align: center;
@@ -18,7 +18,6 @@ h1 {
   padding: 24px 16px;
   text-align: center;
   font-size: 2.2rem;
-  /* background-image: url('/images/board.png'); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain; /* 等比例完整顯示 */
